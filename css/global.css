@@ -1,0 +1,70 @@
+/* ============================================
+   ESTILOS GLOBALES - Reset, base, utilidades
+   ============================================ */
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--verde-oscuro);
+  color: var(--gris-texto);
+  overflow-x: hidden;
+}
+
+/* Utilidades de layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 7rem 0;
+}
+
+/* Sin padding para hero y fotos-estudio (pegados entre sí) */
+#inicio,
+#fotos-estudio {
+  padding: 0;
+}
+
+/* Componentes de sección reutilizables */
+.section-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--verde-medio);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  color: var(--verde-oscuro);
+  line-height: 1.1;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--verde-medio);
+}
+
+.gold-line {
+  width: 48px;
+  height: 2px;
+  background: var(--dorado);
+  margin: 1.8rem 0;
+}

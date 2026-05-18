@@ -1,0 +1,132 @@
+/* ============================================
+   NAVBAR - Navegación fija superior
+   ============================================ */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-navbar);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  height: 72px;
+  background: rgba(26, 58, 40, 0.97);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+  transition: all var(--transition-normal);
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.nav-logo-main {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dorado);
+  letter-spacing: 0.08em;
+}
+
+.nav-logo-sub {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: var(--dorado);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* Links de navegación */
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+/* Menu hamburguesa para mobile */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 2px;
+  background: var(--dorado);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: rgba(26, 58, 40, 0.98);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+  }
+  
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 232, 0.8);
+  text-decoration: none;
+  transition: color var(--transition-normal);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--dorado);
+  transition: width var(--transition-normal);
+}
+
+.nav-links a:hover {
+  color: var(--dorado);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}

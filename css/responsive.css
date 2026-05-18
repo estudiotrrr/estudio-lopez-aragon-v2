@@ -1,0 +1,71 @@
+/* ============================================
+   RESPONSIVE - Media queries
+   ============================================ */
+
+/* Tablet y mobile */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nosotros-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  .servicios-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile pequeño */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-stat-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

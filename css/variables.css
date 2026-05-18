@@ -1,0 +1,41 @@
+/* ============================================
+   VARIABLES - Colores, tipografías, espaciado
+   ============================================ */
+
+:root {
+  /* Colores principales - Verde */
+  --verde: #2d5a3d;
+  --verde-oscuro: #1a3a28;
+  --verde-medio: #3d7a54;
+  --verde-claro: #5a9e70;
+  --verde-palido: #e8f2ec;
+
+  /* Colores acento - Dorado */
+  --dorado: #c9a84c;
+  --dorado-claro: #e8c97a;
+
+  /* Colores neutros */
+  --crema: #f5f0e8;
+  --blanco: #fafaf8;
+  --gris-texto: #3a3a3a;
+  --gris-suave: #6b6b6b;
+  --negro: #111111;
+
+  /* Tipografías */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Jost', sans-serif;
+
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease;
+  --transition-very-slow: 0.8s ease;
+
+  /* Sombras */
+  --shadow-card: 0 12px 40px rgba(26, 58, 40, 0.12);
+
+  /* Z-index */
+  --z-navbar: 1000;
+  --z-slider-dots: 20;
+  --z-hero-content: 10;
+}

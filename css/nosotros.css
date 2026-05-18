@@ -1,0 +1,179 @@
+/* ============================================
+   NOSOTROS - Sección sobre el estudio y equipo
+   ============================================ */
+
+#nosotros {
+  background: var(--blanco);
+}
+
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+/* Texto descriptivo */
+.nosotros-text p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--gris-suave);
+  margin-bottom: 1.2rem;
+}
+
+/* Estadísticas */
+.nosotros-stat-row {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(45, 90, 61, 0.15);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--verde);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gris-suave);
+  margin-top: 0.3rem;
+}
+
+/* Equipo */
+.team-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--verde-oscuro);
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Tarjetas de abogados */
+.lawyer-card {
+  background: var(--crema);
+  border: 1px solid rgba(45, 90, 61, 0.1);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.lawyer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.lawyer-photo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(135deg, var(--verde-oscuro) 0%, var(--verde-medio) 100%);
+}
+
+.lawyer-photo-placeholder {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, var(--verde-oscuro) 0%, var(--verde-medio) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lawyer-initials {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: rgba(245, 240, 232, 0.5);
+  letter-spacing: 0.05em;
+}
+
+.lawyer-info {
+  padding: 1.2rem 1.3rem 1rem;
+}
+
+.lawyer-name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--verde-oscuro);
+}
+
+.lawyer-univ {
+  font-size: 0.72rem;
+  color: var(--gris-suave);
+  margin-top: 0.2rem;
+  font-weight: 300;
+}
+
+.lawyer-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--verde-medio);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.lawyer-wa:hover {
+  color: var(--dorado);
+}
+
+.wa-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Responsive nosotros */
+@media (max-width: 1024px) {
+  .nosotros-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nosotros-stat-row {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .stat-num {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .lawyer-photo,
+  .lawyer-photo-placeholder {
+    height: 220px;
+  }
+}

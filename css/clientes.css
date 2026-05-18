@@ -1,0 +1,120 @@
+/* ============================================
+   CLIENTES - Carrusel de logos
+   ============================================ */
+
+#clientes {
+  background: var(--crema);
+}
+
+.clientes-subtitle {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--gris-suave);
+  max-width: 500px;
+  line-height: 1.7;
+  margin-bottom: 3.5rem;
+}
+
+/* Contenedor del carrusel */
+.clientes-track-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Degradados en los bordes */
+.clientes-track-wrapper::before,
+.clientes-track-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clientes-track-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--crema), transparent);
+}
+
+.clientes-track-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--crema), transparent);
+}
+
+/* Track animado */
+.clientes-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-logos 30s linear infinite;
+  width: max-content;
+}
+
+/* Responsive: logos más pequeños en mobile */
+@media (max-width: 768px) {
+  .cliente-logo {
+    width: 140px;
+    height: 85px;
+  }
+  
+  .cliente-logo img {
+    max-width: 120px;
+    max-height: 70px;
+  }
+}
+
+.clientes-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Logo individual */
+.cliente-logo {
+  flex-shrink: 0;
+  width: 200px;
+  height: 120px;
+  background: white;
+  border: 1px solid rgba(45, 90, 61, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition-normal);
+}
+
+.cliente-logo:hover {
+  border-color: var(--verde-medio);
+}
+
+.cliente-logo-text {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--verde-oscuro);
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+/* Imágenes de logos de clientes */
+.cliente-logo img {
+  max-width: 170px;
+  max-height: 100px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.85;
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.cliente-logo:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}

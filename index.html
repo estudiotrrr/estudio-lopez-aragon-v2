@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>López Aragón – Estudio Jurídico</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- CSS Components -->
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/navbar.css"/>
+  <link rel="stylesheet" href="css/hero.css"/>
+  <link rel="stylesheet" href="css/nosotros.css"/>
+  <link rel="stylesheet" href="css/servicios.css"/>
+  <link rel="stylesheet" href="css/clientes.css"/>
+  <link rel="stylesheet" href="css/fotos-estudio.css"/>
+  <link rel="stylesheet" href="css/footer.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-logo">
+      <span class="nav-logo-main">López Aragón</span>
+      <span class="nav-logo-sub">Estudio Jurídico</span>
+    </div>
+    <div class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#clientes">Clientes</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- INICIO / HERO -->
+  <section id="inicio">
+    <div class="slider">
+      <div class="slide active">
+        <div class="slide-bg slide-bg-1"></div>
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="slide">
+        <div class="slide-bg slide-bg-2"></div>
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="slide">
+        <div class="slide-bg slide-bg-3"></div>
+        <div class="slide-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <span class="hero-badge">Estudio Jurídico · San Juan · Argentina</span>
+        <h1 class="hero-title">
+          López<br><em>Aragón</em>
+        </h1>
+        <div class="hero-divider"></div>
+        <p class="hero-subtitle">Derecho · Ética · Compromiso · Desde 1962</p>
+        <a href="#fotos-estudio" class="hero-cta">Conocer el Estudio</a>
+      </div>
+
+      <div class="slider-dots">
+        <div class="dot active" onclick="goToSlide(0)"></div>
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTOS DEL ESTUDIO -->
+  <section id="fotos-estudio">
+    <div class="fotos-track-wrapper">
+      <div class="fotos-track">
+        <!-- PRIMERA COPIA — agregá tus fotos acá con el formato:
+             <div class="foto-estudio"><img src="img/estudio/foto-1.jpg" alt="Estudio"/></div>
+             Por ahora usamos placeholders de color -->
+        <div class="foto-estudio foto-placeholder foto-p1" ><img data-src="img/estudio/foto-p1.jpeg" src="" alt="Estudio"/></div>
+        <div class="foto-estudio foto-placeholder foto-p2" ><img data-src="img/estudio/foto-p2.jpeg" src="" alt="Estudio"/></div>
+        <div class="foto-estudio foto-placeholder foto-p3" ><img data-src="img/estudio/foto-p3.jpeg" src="" alt="Estudio"/></div>
+        <div class="foto-estudio foto-placeholder foto-p4" ><img data-src="img/estudio/foto-p4.jpeg" src="" alt="Estudio"/></div>
+        <div class="foto-estudio foto-placeholder foto-p5" ><img data-src="img/estudio/foto-p5.jpeg" src="" alt="Estudio"/></div>
+        <div class="foto-estudio foto-placeholder foto-p6" ><img data-src="img/estudio/foto-p6.jpeg" src="" alt="Estudio"/></div>
+        <!-- SEGUNDA COPIA (necesaria para el loop infinito) -->
+        <div class="foto-estudio foto-placeholder foto-p1" ><img data-src="img/estudio/foto-p1.jpeg" src="" alt="Estudio"/></div>
+        <div class="foto-estudio foto-placeholder foto-p2" ><img data-src="img/estudio/foto-p2.jpeg" src="" alt="Estudio"/></div>
+        <div class="foto-estudio foto-placeholder foto-p3" ><img data-src="img/estudio/foto-p3.jpeg" src="" alt="Estudio"/></div>
+        <div class="foto-estudio foto-placeholder foto-p4" ><img data-src="img/estudio/foto-p4.jpeg" src="" alt="Estudio"/></div>
+        <div class="foto-estudio foto-placeholder foto-p5" ><img data-src="img/estudio/foto-p5.jpeg" src="" alt="Estudio"/></div>
+        <div class="foto-estudio foto-placeholder foto-p6" ><img data-src="img/estudio/foto-p6.jpeg" src="" alt="Estudio"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros">
+    <div class="container">
+      <div class="nosotros-grid">
+
+        <div class="nosotros-text reveal">
+          <span class="section-label">Sobre Nosotros</span>
+          <h2 class="section-title">Más de <em>64 años</em><br>de trayectoria</h2>
+          <div class="gold-line"></div>
+          <p>Con más de 64 años de trayectoria, nuestro Estudio Jurídico es sinónimo de compromiso, ética y excelencia profesional. Fundado en 1962 por el Dr. Ricardo López Aragón, nació con el firme propósito de brindar asesoramiento jurídico integral, basado en la responsabilidad, la cercanía con el cliente y la búsqueda constante de soluciones eficientes.</p>
+          <p>A lo largo de más de seis décadas, hemos acompañado a empresas y particulares en la prevención y resolución de conflictos, consolidando una práctica sustentada en la experiencia, la actualización permanente y el trato personalizado.</p>
+          <p>La tradición y los valores fundacionales continúan guiando nuestro trabajo diario, combinando experiencia y visión estratégica para ofrecer respuestas jurídicas sólidas, confiables y adaptadas a los desafíos actuales.</p>
+
+          <div class="nosotros-stat-row">
+            <div class="stat">
+              <span class="stat-num">64+</span>
+              <span class="stat-label">Años de trayectoria</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">4</span>
+              <span class="stat-label">Abogados especialistas</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">6</span>
+              <span class="stat-label">Áreas de práctica</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="nosotros-equipo reveal">
+          <h3 class="team-title">Nuestro <em>Equipo</em></h3>
+          <div class="team-grid">
+
+            <div class="lawyer-card">
+              <img class="lawyer-photo" data-src="img/doctores/ricardo-lopez-aragon.jpg" src="" alt="Dr. Ricardo López" decoding="async"/>
+              <div class="lawyer-info">
+                <div class="lawyer-name">Dr. Ricardo López</div>
+                <div class="lawyer-univ">Universidad Nacional de Córdoba · Egresado 1991</div>
+                <a href="https://wa.me/5492644153122" class="lawyer-wa" target="_blank">
+                  <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div class="lawyer-card">
+              <img class="lawyer-photo" data-src="img/doctores/carlos-seade.jpg" src="" alt="Dr. Carlos Seade" decoding="async"/>
+              <div class="lawyer-info">
+                <div class="lawyer-name">Dr. Carlos Seade </div>
+                <div class="lawyer-univ">Universidad Nacional de Córdoba · Egresado 1991</div>
+                <a href="https://wa.me/5492645033322" class="lawyer-wa" target="_blank">
+                  <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div class="lawyer-card">
+              <img class="lawyer-photo" data-src="img/doctores/tomas-lopez.jpg" src="" alt="Dr. Tomas López" decoding="async"/>
+              <div class="lawyer-info">
+                <div class="lawyer-name">Dr. Tomas López</div>
+                <div class="lawyer-univ">Unviersidad Empresarial Siglo 21 · Egresado 2025</div>
+                <a href="https://wa.me/5492644825325" class="lawyer-wa" target="_blank">
+                  <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div class="lawyer-card">
+              <img class="lawyer-photo" data-src="img/doctores/diego-mut.jpg" src="" alt="Dr. Diego Mut" decoding="async"/>
+              <div class="lawyer-info">
+                <div class="lawyer-name">Dr. Diego Mut</div>
+                <div class="lawyer-univ">Unviersidad Empresarial Siglo 21 · Egresado 2025</div>
+                <a href="https://wa.me/5492646601828" class="lawyer-wa" target="_blank">
+                  <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Áreas de Práctica</span>
+        <h2 class="section-title">Nuestros <em>Servicios</em></h2>
+        <div class="gold-line"></div>
+        <p class="servicios-intro">Somos especialistas en derecho societario y minero, brindando un servicio personalizado para soluciones jurídicas integrales a empresas y emprendedores.</p>
+      </div>
+
+      <div class="servicios-grid reveal" style="transition-delay:0.15s">
+
+        <div class="servicio-card">
+          <div class="servicio-num">01</div>
+          <div class="servicio-titulo">Societario</div>
+          <ul class="servicio-lista">
+            <li>Armado de grupos societarios – Holdings</li>
+            <li>Due diligence legal</li>
+            <li>Redacción y revisión de contratos o estatutos</li>
+            <li>Rubricación de Libros Societarios</li>
+            <li>Confección de Actas de Directorio y Asamblea</li>
+            <li>Redacción y contestación de cartas documentos</li>
+            <li>Asistencia a Asambleas</li>
+            <li>Inicio y contestación de demandas</li>
+          </ul>
+        </div>
+
+        <div class="servicio-card">
+          <div class="servicio-num">02</div>
+          <div class="servicio-titulo">Minero</div>
+          <ul class="servicio-lista">
+            <li>Control y seguimiento de Propiedad Minera</li>
+            <li>Due diligence de Propiedades Mineras</li>
+            <li>Confección de la parte legal para informe NI 43-101</li>
+            <li>Redacción, revisión y seguimiento de contratos</li>
+            <li>Presentaciones en Ministerio de Minería</li>
+            <li>Redacción y contestación de informes e intimaciones</li>
+            <li>Inicio y contestación de expedientes u oposiciones</li>
+          </ul>
+        </div>
+
+        <div class="servicio-card">
+          <div class="servicio-num">03</div>
+          <div class="servicio-titulo">Civil / Comercial</div>
+          <ul class="servicio-lista">
+            <li>Redacción y revisión de contratos</li>
+            <li>Redacción y contestación de cartas documentos</li>
+            <li>Inicio y contestación de demandas</li>
+            <li>Gestión y cobranza de documentos comerciales</li>
+            <li>Presentaciones en Defensa del Consumidor</li>
+          </ul>
+        </div>
+
+        <div class="servicio-card">
+          <div class="servicio-num">04</div>
+          <div class="servicio-titulo">Laboral</div>
+          <ul class="servicio-lista">
+            <li>Redacción y revisión de contratos laborales</li>
+            <li>Presentaciones en Subsecretaría de Trabajo</li>
+            <li>Asistencia a audiencias en Subsecretaría de Trabajo</li>
+            <li>Redacción y contestación de cartas documentos</li>
+            <li>Inicio y contestación de demandas hasta su finalización</li>
+          </ul>
+        </div>
+
+        <div class="servicio-card">
+          <div class="servicio-num">05</div>
+          <div class="servicio-titulo">Administrativo</div>
+          <ul class="servicio-lista">
+            <li>Revisión de contratos administrativos</li>
+            <li>Presentaciones en reparticiones públicas</li>
+            <li>Revisión de pliegos licitatorios</li>
+            <li>Inicio y contestación de reclamos administrativos</li>
+            <li>Participación y seguimiento de expedientes</li>
+          </ul>
+        </div>
+
+        <div class="servicio-card">
+          <div class="servicio-num">06</div>
+          <div class="servicio-titulo">Varios</div>
+          <ul class="servicio-lista">
+            <li>Evacuación de consultas verbales, telefónicas o por correo</li>
+            <li>Asistencia a reuniones de socios y/o asambleas</li>
+            <li>Representación en Defensa del Consumidor</li>
+            <li>Servicio de Traducción e Interpretación Pública (Español/Inglés)</li>
+            <li>Asistencia en Derecho Penal mediante estudio especializado externo</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES -->
+  <section id="clientes">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Quiénes confían en nosotros</span>
+        <h2 class="section-title">Nuestros <em>Clientes</em></h2>
+        <div class="gold-line"></div>
+        <p class="clientes-subtitle">A lo largo de más de seis décadas hemos acompañado a empresas líderes y particulares en toda la región.</p>
+      </div>
+
+      <div class="clientes-track-wrapper reveal" style="transition-delay:0.15s">
+        <div class="clientes-track" id="clientes-track">
+          <!-- Logos de clientes – reemplazá con las imágenes reales -->
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-01.png" src="" alt="Cliente 1"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-02.png" src="" alt="Cliente 2"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-03.png" src="" alt="Cliente 3"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-04.png" src="" alt="Cliente 4"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-05.png" src="" alt="Cliente 5"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-06.png" src="" alt="Cliente 6"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-07.png" src="" alt="Cliente 7"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-08.png" src="" alt="Cliente 8"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-09.png" src="" alt="Cliente 9"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-10.png" src="" alt="Cliente 10"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-11.png" src="" alt="Cliente 11"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-12.png" src="" alt="Cliente 12"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-13.png" src="" alt="Cliente 13"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-14.png" src="" alt="Cliente 14"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-16.png" src="" alt="Cliente 16"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-17.png" src="" alt="Cliente 17"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-18.png" src="" alt="Cliente 18"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-19.png" src="" alt="Cliente 19"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-20.png" src="" alt="Cliente 20"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-21.png" src="" alt="Cliente 21"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-22.png" src="" alt="Cliente 22"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-23.png" src="" alt="Cliente 23"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-24.png" src="" alt="Cliente 24"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-25.png" src="" alt="Cliente 25"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-26.png" src="" alt="Cliente 26"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-27.png" src="" alt="Cliente 27"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-28.png" src="" alt="Cliente 28"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-29.png" src="" alt="Cliente 29"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-31.png" src="" alt="Cliente 31"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-32.png" src="" alt="Cliente 32"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-33.png" src="" alt="Cliente 33"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-34.png" src="" alt="Cliente 34"/></div>
+
+          
+          <!-- Duplicados para el loop infinito -->
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-01.png" src="" alt="Cliente 1"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-02.png" src="" alt="Cliente 2"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-03.png" src="" alt="Cliente 3"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-04.png" src="" alt="Cliente 4"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-05.png" src="" alt="Cliente 5"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-06.png" src="" alt="Cliente 6"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-07.png" src="" alt="Cliente 7"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-08.png" src="" alt="Cliente 8"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-09.png" src="" alt="Cliente 9"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-10.png" src="" alt="Cliente 10"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-11.png" src="" alt="Cliente 11"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-12.png" src="" alt="Cliente 12"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-13.png" src="" alt="Cliente 13"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-14.png" src="" alt="Cliente 14"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-16.png" src="" alt="Cliente 16"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-17.png" src="" alt="Cliente 17"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-18.png" src="" alt="Cliente 18"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-19.png" src="" alt="Cliente 19"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-20.png" src="" alt="Cliente 20"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-21.png" src="" alt="Cliente 21"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-22.png" src="" alt="Cliente 22"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-23.png" src="" alt="Cliente 23"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-24.png" src="" alt="Cliente 24"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-25.png" src="" alt="Cliente 25"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-26.png" src="" alt="Cliente 26"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-27.png" src="" alt="Cliente 27"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-28.png" src="" alt="Cliente 28"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-29.png" src="" alt="Cliente 29"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-31.png" src="" alt="Cliente 31"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-32.png" src="" alt="Cliente 32"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-33.png" src="" alt="Cliente 33"/></div>
+          <div class="cliente-logo"><img data-src="img/clientes/cliente-34.png" src="" alt="Cliente 34"/></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO / FOOTER -->
+  <footer id="contacto">
+    <!-- Mapa de Google Maps – reemplazá con la URL de embed real del estudio -->
+    <div class="mapa-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d22873.84886271756!2d-68.54668016644563!3d-31.54563195688387!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96814020772c64ad%3A0x49b67ba6d11c8a21!2sMendoza%20Sur%201067%2C%20J5400%20San%20Juan%2C%20Argentina!5e0!3m2!1ses!2sus!4v1776800803390!5m2!1ses!2sus">
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación López Aragón Estudio Jurídico">
+      </iframe>
+    </div>
+
+    <div class="footer-content">
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-brand">
+            <div class="footer-logo-main">López Aragón</div>
+            <span class="footer-logo-sub">Estudio Jurídico · Desde 1962</span>
+            <p class="footer-tagline">Más de seis décadas brindando asesoramiento jurídico integral con compromiso, ética y excelencia profesional.</p>
+          </div>
+
+          <div>
+            <div class="footer-heading">Ubicación</div>
+            <div class="footer-info-line">
+              <span class="footer-info-icon">📍</span>
+              <span class="footer-info-text">
+                Mendoza 1067 Sur<br>
+                San Juan Capital, Argentina
+              </span>
+            </div>
+            <div class="footer-info-line">
+              <span class="footer-info-icon">🕐</span>
+              <span class="footer-info-text">
+                Lun – Vie: 9:00 a 18:00 hs<br>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Contacto</div>
+            <div class="footer-info-line">
+              <span class="footer-info-icon">📞</span>
+              <span class="footer-info-text">
+                <a href="tel:+5493510000000">(0351) 000-0000</a>
+              </span>
+            </div>
+            <div class="footer-info-line">
+              <span class="footer-info-icon">✉️</span>
+              <span class="footer-info-text">
+                <a href="mailto:estudio@lopezaragon.com.ar">estudio@lopezaragon.com.ar</a>
+              </span>
+            </div>
+            <div class="footer-info-line">
+              <span class="footer-info-icon">💬</span>
+              <span class="footer-info-text">
+                <a href="https://wa.me/5493510000000" target="_blank">WhatsApp del Estudio</a>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Navegación</div>
+            <ul class="footer-nav-links">
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#clientes">Clientes</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 López Aragón Estudio Jurídico. Todos los derechos reservados. | Desarrollado por Roberto Rojo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

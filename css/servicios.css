@@ -1,0 +1,151 @@
+/* ============================================
+   SERVICIOS - Áreas de práctica
+   ============================================ */
+
+#servicios {
+  background: var(--verde-oscuro);
+  position: relative;
+  overflow: hidden;
+}
+
+#servicios::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(90, 158, 112, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Variantes de componentes de sección para fondo oscuro */
+#servicios .section-label {
+  color: var(--dorado);
+}
+
+#servicios .section-title {
+  color: var(--crema);
+}
+
+#servicios .section-title em {
+  color: var(--dorado-claro);
+}
+
+#servicios .gold-line {
+  background: var(--dorado);
+}
+
+.servicios-intro {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(245, 240, 232, 0.65);
+  max-width: 640px;
+  line-height: 1.75;
+  margin-bottom: 4rem;
+}
+
+/* Grid de servicios */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: rgba(201, 168, 76, 0.15);
+}
+
+/* Tarjetas de servicio */
+.servicio-card {
+  background: rgba(26, 58, 40, 0.6);
+  padding: 2.2rem 2rem;
+  transition: background var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.servicio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background: var(--dorado);
+  transition: height 0.4s ease;
+}
+
+.servicio-card:hover {
+  background: rgba(45, 90, 61, 0.5);
+}
+
+.servicio-card:hover::before {
+  height: 100%;
+}
+
+.servicio-num {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 300;
+  color: rgba(201, 168, 76, 0.2);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.servicio-titulo {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--crema);
+  letter-spacing: 0.03em;
+  margin-bottom: 1.2rem;
+}
+
+.servicio-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.servicio-lista li {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: rgba(245, 240, 232, 0.6);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.servicio-lista li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: rgba(201, 168, 76, 0.5);
+  font-size: 0.65rem;
+}
+
+/* Responsive servicios */
+@media (max-width: 1024px) {
+  .servicios-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .servicio-card {
+    padding: 1.8rem 1.5rem;
+  }
+  
+  .servicio-num {
+    font-size: 2.5rem;
+  }
+  
+  .servicio-titulo {
+    font-size: 1.2rem;
+  }
+}
